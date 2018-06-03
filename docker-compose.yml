@@ -26,6 +26,8 @@ services:
       - ./frontend:/code
     ports:
       - "4200:4200"
+    depends_on:
+      - web
 
   nginx:
     image: nginx
@@ -37,5 +39,3 @@ services:
       - ./frontend/nginx/logs/nginx/:/var/log/nginx
     ports:
       - "5888:80"
-    depends_on:
-      - front      
