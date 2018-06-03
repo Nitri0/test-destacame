@@ -1,4 +1,27 @@
-frontend/node_modules
-.idea/
-frontend/dist
-frontend/nginx/
+/frontend/node_modules
+/.idea/
+
+/frontend/dist
+/frontend/nginx/
+/frontend/dist-server
+/frontend/tmp
+/frontend/out-tsc
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# e2e
+/frontend/e2e/*.js
+/frontend/e2e/*.map
+
+# System Files
+/frontend/.DS_Store
+/frontend/Thumbs.db
+
+
+
+*pyc
