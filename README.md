@@ -4,17 +4,39 @@
 * Docker
 * Docker Compose
 
+
+
 ## Build
 
-Solo es necesario utilizar el siguiente comando:
-
+1. Clonar repositorio
 ```
-$ docker-compouse up
+    $ git clone https://github.com/Nitri0/test-destacame.git
 ```
 
+2. Entrar carpeta de proyecto
+```
+    $ cd test-destacame
+```
 
+. Levantar contendores
+```
+    $ docker-compouse up
+```
+
+## Acceso
+
+Nginx
+```
+    localhost:5888
+```
+
+Angular dev
+```
+    localhost:4200
+```
 
 ## Puntos de mejora
 * Modales con angular.
 * Validaciones de formularios.
 * tiempo de build
+
