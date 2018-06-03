@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: latam-regular;
+  src: url(assets/fonts/Latam_Sans_Regular.woff2) format("opentype");
+}
+
+@font-face {
+  font-family: latam-light;
+  src: url(assets/fonts/Latam_Sans_Light.woff2) format("opentype");
+}
+
+@font-face {
+  font-family: latam-extended;
+  src: url(assets/fonts/Latam_Sans_Extended.woff2) format("opentype");
+}
+
+@font-face {
+  font-family: latam-bold;
+  src: url(assets/fonts/Latam_Sans_Bold.woff2) format("opentype");
+}
+
+@font-face {
+  font-family: latam-black;
+  src: url(assets/fonts/Latam_Sans_Black.woff2) format("opentype");
+}
+
+body{
+  font-family: 'latam-regular', 'arial', sans-serif;
+  background-image: url(assets/img/bg_clouds.png), url(assets/img/bg_sky.jpg);
+  background-position: top, center top;
+  background-repeat: no-repeat, repeat-x;
+}
+
+header{
+  width: 100%;
+  padding: 20px;
+  background-color: #1b0088;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 1.68px 1.32px rgba(0,2,0,.3);
+}
+
+/*Product Card*/
+
+.card-product{
+  background-repeat: no-repeat;
+  background-position: 5% 5%;
+  background-size: 80px 80px;
+}
+
+/*Hightlight Product*/
+
+.highlight-product{
+  /*flex-grow: 2;*/
+}
+
+/*Product Background*/
+
+.product-liquor{
+  background-image: url(assets/img/icon-liquor.png);
+}
+
+.product-fragrance{
+  background-image: url(assets/img/icon-fragrance.png);
+}
+
+.product-cigarette{
+  background-image: url(assets/img/icon-cigarette.png);
+}
+
+/*Button Latam App*/
+
+.btn-latam-app{
+  border-radius: 3px;
+  background-color: #2b862d;
+  font-family: latam-light;
+}
+
+

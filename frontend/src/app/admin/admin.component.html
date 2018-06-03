@@ -1,0 +1,78 @@
+<header>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-2">
+          <span class="logo-latam"><img src="../../assets/img/destacame_logo.svg" alt=""></span>
+        </div>
+        <div class="col-10 text-right">
+          <a [routerLink]="['']">Dashboard</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<div class="container">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">ADMIN PANEL</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" (click)="setView('trayecto')">
+          <a class="nav-link" >Trayectorias</a>
+        </li>
+        <li class="nav-item" (click)="setView('chofer')">
+          <a class="nav-link">Choferes</a>
+        </li>
+        <li class="nav-item" (click)="setView('bus')">
+          <a class="nav-link">Buses</a>
+        </li>
+        <li class="nav-item" (click)="setView('horario')">
+          <a class="nav-link">Horario</a>
+        </li>
+        <li class="nav-item" (click)="setView('viaje')">
+          <a class="nav-link">Viaje</a>
+        </li>
+        <li class="nav-item" (click)="setView('estadistica')">
+          <a class="nav-link">Estadisticas</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+  <div class="row content-cruds" *ngIf="dataShow!=='estadistica'">
+    <div class="col-md-12">
+      <a class="btn btn-primary align-right" (click)="open(content)">Crear</a>
+    </div>
+    <div class="col-md-8 offset-2">
+      <general-list [data]="this.formsData" [openEditModal]="open"></general-list>
+    </div>
+  </div>
+
+  <div class="row content-cruds" *ngIf="dataShow==='estadistica'">
+      <div class="col-md-12">
+          <a class="btn btn-primary align-right">Crear</a>
+        </div>
+    <div class="col-md-8 offset-2">
+      <general-list [data]="this.formsData"></general-list>
+    </div>
+  </div>
+
+</div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title">Crear {{this.formsData.name}}</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <general-form [data]="this.forms[this.formsData.name]"></general-form>
+    </div>
+  </ng-template>

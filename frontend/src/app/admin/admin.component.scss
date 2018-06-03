@@ -1,0 +1,46 @@
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+
+
+.light-blue-backdrop{
+  background-color: #5cb3fd;
+}
+
+.margin {
+  margin: 1%;
+}
+
+.card-img-top {
+  width: 50%;
+}
+
+.align-right{
+  float: right;
+}
+
+.logo-latam{
+  img{
+    width: 150px;
+  }
+}
+
+.list-group-item{
+  border: none;
+  padding-bottom: 0;
+}
+
+.container-login{
+  max-width: 400px !important;
+  .card{
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+  label{
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #1b0088;
+  }
+  .card-body{
+    padding-top: 0;
+  }
+}

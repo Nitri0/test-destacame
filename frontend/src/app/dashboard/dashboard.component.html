@@ -1,0 +1,33 @@
+<header>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-md-2">
+        <span class="logo-latam"><img src="../../assets/img/destacame_logo.svg" alt=""></span>
+      </div>
+      <div class="col-10 text-right">
+        <a [routerLink]="['admin']">Admin</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="table-horarios">
+    <div class="table-titles col-md-12">
+      <div class="col-md-2 horario border">HORARIO</div>
+      <div class="col-md-2 border">LUNES</div>
+      <div class="col-md-2 border">MARTES</div>
+      <div class="col-md-2 border">MIERCOLES</div>
+      <div class="col-md-2 border">JUEVES</div>
+      <div class="col-md-2 border">VIERNES</div>
+    </div>
+    <div class="tables-content col-md-12" *ngFor="let hora of horas">
+      <div class="col-md-2 horario border">{{hora.desde.hora}}{{hora.desde.sh}} a {{hora.hasta.hora}}{{hora.hasta.sh}}</div>
+      <div class="col-md-2 border">{{ getChoferFromHorario("monday", hora.desde.hora, hora.desde.sh, hora.hasta.hora, hora.hasta.sh) }}</div>
+      <div class="col-md-2 border">{{ getChoferFromHorario("tuesday", hora.desde.hora, hora.desde.sh, hora.hasta.hora, hora.hasta.sh) }}</div>
+      <div class="col-md-2 border">{{ getChoferFromHorario("wednesday", hora.desde.hora, hora.desde.sh, hora.hasta.hora, hora.hasta.sh) }}</div>
+      <div class="col-md-2 border">{{ getChoferFromHorario("thursday", hora.desde.hora, hora.desde.sh, hora.hasta.hora, hora.hasta.sh) }}</div>
+      <div class="col-md-2 border">{{ getChoferFromHorario("friday", hora.desde.hora, hora.desde.sh, hora.hasta.hora, hora.hasta.sh) }}</div>
+    </div>
+  </div>
+</div>

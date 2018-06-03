@@ -1,0 +1,22 @@
+
+<div class="row">
+  <div class="col-md-12">
+    <form [formGroup]="myform" novalidate  (ngSubmit)="onSubmit()">
+        <div class="form-group" [ngClass]="{
+          'has-danger': myform.controls[input['inputName']].invalid && myform.controls[input['inputName']].dirty, 
+          'has-success': myform.controls[input['inputName']].valid && myform.controls[input['inputName']].dirty 
+        }" *ngFor="let input of data.inputs">
+        <label for="{{input.inputName}}">{{input.label}}</label>
+
+        <input *ngIf="input.type=='input'"  formControlName="{{input.inputName}}" class="form-control" id="{{input.inputName}}" placeholder="{{input.placeholder}}">
+
+        <select *ngIf="input.type=='select'" class="form-control" formControlName="{{input.inputName}}">
+          <option value="">{{input.selectData.defaultOption}}</option>
+          <option *ngFor="let option of resultConsult[ input.selectData.varResultName ]" [value]="option[input.selectData.attrOptionValue]">{{option[input.selectData.attrOptionLabel]}}</option>
+        </select>
+
+      </div>
+      <button type="submit" class="btn btn-primary">{{nameSubmitButton}}</button>
+    </form>
+  </div>
+</div>
