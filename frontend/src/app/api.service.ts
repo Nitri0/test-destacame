@@ -12,7 +12,7 @@ import { BaseService } from './base.service';
 @Injectable()
 export class ApiService extends BaseService {
 
-  url = 'http://localhost:8000/';
+  url = 'http://35.196.229.209/:8000/';
 
   constructor(public http: HttpClient) {
     super(http);
