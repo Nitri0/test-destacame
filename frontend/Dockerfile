@@ -16,3 +16,4 @@ RUN apk update \
   && npm cache verify \
   && sed -i -e "s/bin\/ash/bin\/sh/" /etc/passwd
 
+RUN npm install @angular/cli
